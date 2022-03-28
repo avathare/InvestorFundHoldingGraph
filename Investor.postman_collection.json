@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "b2f9953c-7ec0-4403-acd5-79ef66115f3b",
+		"name": "Investor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Vertex",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"abhi\",\r\n    \"type\":\"INV\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8443/addVertex",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"addVertex"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8443/healthz",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"healthz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Vertex",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8443/getAllVertex",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"getAllVertex"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Bulk Vertex",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \"abhi\",\r\n        \"type\": \"INV\"\r\n    },\r\n    {\r\n        \"name\": \"pratik\",\r\n        \"type\": \"FUND\"\r\n    },\r\n    {\r\n        \"name\": \"santosh\",\r\n        \"type\": \"HOLD\",\r\n        \"value\":30\r\n    },\r\n    {\r\n        \"name\": \"abhi1\",\r\n        \"type\": \"INV\"\r\n    },\r\n    {\r\n        \"name\": \"pratik1\",\r\n        \"type\": \"FUND\"\r\n    },\r\n    {\r\n        \"name\": \"pratik2\",\r\n        \"type\": \"FUND\"\r\n    },\r\n    {\r\n        \"name\": \"santosh1\",\r\n        \"type\": \"HOLD\",\r\n        \"value\":10\r\n    },\r\n    {\r\n        \"name\": \"santosh2\",\r\n        \"type\": \"HOLD\",\r\n        \"value\":20\r\n    },\r\n    {\r\n        \"name\": \"santosh3\",\r\n        \"type\": \"HOLD\",\r\n        \"value\":40\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8443/addBulkVertex",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"addBulkVertex"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Association",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"invid\": \"INV_948f8cf7-db4a-490f-afc8-a42eb2456308\",\r\n    \"fundid\": \"FUND_3b82ca5b-408f-4b25-882d-32142158f258\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8443/addAssociation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"addAssociation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Bulk Association",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"invid\": \"INV_f998dc21-87f1-44df-af8a-b3f70df5a4ad\",\r\n        \"fundid\": \"FUND_16ffc2ae-16ab-4de4-8293-ff15f5ba9223\"\r\n    },\r\n    {\r\n        \"holdingid\": \"HOLD_772221a3-888b-4fab-92fd-0508bff34219\",\r\n        \"fundid\": \"FUND_16ffc2ae-16ab-4de4-8293-ff15f5ba9223\"\r\n    },\r\n    {\r\n        \"invid\":\"INV_7445e881-1ae2-4aa1-8893-73c8d3a88b22\",\r\n        \"fundid\":\"FUND_65aef2ac-44ce-4114-9b1c-c6521d4bdc59\"\r\n    },\r\n    {\r\n        \"invid\":\"INV_7445e881-1ae2-4aa1-8893-73c8d3a88b22\",\r\n        \"fundid\":\"FUND_a57d3f25-68b1-4fc7-9e3a-590ef9cc11df\"\r\n    },\r\n    {\r\n        \"holdingid\":\"HOLD_e590590d-996a-4c06-8155-1259c6d77888\",\r\n        \"fundid\":\"FUND_a57d3f25-68b1-4fc7-9e3a-590ef9cc11df\"\r\n    },\r\n    {\r\n        \"holdingid\":\"HOLD_fc4701ae-554b-4e33-97bb-11042c9bdbe2\",\r\n        \"fundid\":\"FUND_a57d3f25-68b1-4fc7-9e3a-590ef9cc11df\"\r\n    }\r\n    ,\r\n    {\r\n        \"holdingid\":\"HOLD_fc4701ae-554b-4e33-97bb-11042c9bdbe2\",\r\n        \"fundid\":\"FUND_65aef2ac-44ce-4114-9b1c-c6521d4bdc59\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8443/addBulkAssociation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"addBulkAssociation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find by Fund Id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n   \"HOLD_e590590d-996a-4c06-8155-1259c6d77888\"\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8443/getHolding/fund/FUND_a57d3f25-68b1-4fc7-9e3a-590ef9cc11df",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"getHolding",
+						"fund",
+						"FUND_a57d3f25-68b1-4fc7-9e3a-590ef9cc11df"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find by Investor Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n   \r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8443/getHolding/investor/INV_7445e881-1ae2-4aa1-8893-73c8d3a88b22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"getHolding",
+						"investor",
+						"INV_7445e881-1ae2-4aa1-8893-73c8d3a88b22"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
